@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="«Это всё Ирина!» — виртуальный виниловый релиз лейбла «Три Пэтички»."
+    />
+    <title>Это всё Ирина! — Три Пэтички</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="release-header" aria-labelledby="album-title">
+        <h1 id="album-title">Это всё Ирина!</h1>
+        <p class="label-name">Три Пэтички</p>
+
+        <img
+          class="waveform"
+          src="assets/waveform.png"
+          alt="Светящаяся голубо-розовая звуковая волна с символом воспроизведения"
+          width="2172"
+          height="724"
+        />
+
+        <p class="release-note">6 пластинок. Одна Ирина.</p>
+        <p class="listening-hint">Нажми на пластинку, чтобы послушать</p>
+      </header>
+
+      <section class="record-wall" aria-label="Коллекция из шести пластинок">
+        <div class="record-toolbar">
+          <button class="reset-button" type="button">
+            <span aria-hidden="true">↺</span>
+            Сбросить всё
+          </button>
+        </div>
+
+        <div class="record-grid">
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 01" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-1.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>01</figcaption>
+          </figure>
+
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 02" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-2.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>02</figcaption>
+          </figure>
+
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 03" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-3.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>03</figcaption>
+          </figure>
+
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 04" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-4.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>04</figcaption>
+          </figure>
+
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 05" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-5.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>05</figcaption>
+          </figure>
+
+          <figure class="record-item">
+            <button class="record-button" type="button" aria-label="Послушать пластинку 06" aria-pressed="false">
+              <video muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="videos/record-6.mp4" type="video/mp4" />
+              </video>
+            </button>
+            <figcaption>06</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>Три Пэтички <span aria-hidden="true">·</span> Birthday Edition <span aria-hidden="true">·</span> 2026</footer>
+  </body>
+</html>
