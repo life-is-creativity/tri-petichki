@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Исследование потенциала способностей: 36 утверждений, девять направлений потенциала и профиль по вашим ответам.">
+  <title>Исследование потенциала способностей</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <span class="brand"><span class="brand-mark" aria-hidden="true">и.</span> Исследование потенциала способностей</span>
+      <span class="header-note">Время прислушаться к себе</span>
+    </header>
+
+    <main>
+      <section id="intro-screen" class="screen intro" aria-labelledby="intro-title">
+        <p class="eyebrow">36 утверждений · 9 шкал</p>
+        <h1 id="intro-title" tabindex="-1">Исследование потенциала способностей</h1>
+        <p class="intro-description">Ответьте на 36 утверждений, чтобы исследовать девять направлений потенциала способностей и увидеть свой профиль по ответам</p>
+        <button id="start-button" class="button button-primary" type="button">Начать тест <span aria-hidden="true">→</span></button>
+        <p class="intro-hint">В своём темпе. К любому ответу можно вернуться.</p>
+        <p class="demo-note"><span class="note-dot" aria-hidden="true"></span>Профиль по вашим ответам.<br>Девять направлений потенциала для самоисследования.</p>
+      </section>
+
+      <section id="question-screen" class="screen question-screen" aria-labelledby="question-title" hidden>
+        <div class="progress-meta">
+          <p id="question-counter">1 из 36</p>
+          <span>Ваши ответы</span>
+        </div>
+        <progress id="question-progress" max="36" value="0" aria-label="Прогресс теста" aria-describedby="question-counter">0 из 36</progress>
+
+        <div class="question-content">
+          <p class="eyebrow">Насколько вы согласны?</p>
+          <h2 id="question-title" tabindex="-1" data-question-id="Q1">Я перфекционист(ка).</h2>
+          <p id="answer-instruction" class="question-hint">Выберите ответ, который вам ближе.</p>
+          <div id="answer-options" class="answer-options" role="group" aria-labelledby="question-title" aria-describedby="answer-instruction">
+            <button class="answer-button" type="button" data-value="1" aria-pressed="false"><span class="answer-number">1</span><span class="answer-label">Совсем не согласен</span></button>
+            <button class="answer-button" type="button" data-value="2" aria-pressed="false"><span class="answer-number">2</span><span class="answer-label">Скорее не согласен</span></button>
+            <button class="answer-button" type="button" data-value="3" aria-pressed="false"><span class="answer-number">3</span><span class="answer-label">Нейтрально</span></button>
+            <button class="answer-button" type="button" data-value="4" aria-pressed="false"><span class="answer-number">4</span><span class="answer-label">Скорее согласен</span></button>
+            <button class="answer-button" type="button" data-value="5" aria-pressed="false"><span class="answer-number">5</span><span class="answer-label">Полностью согласен</span></button>
+          </div>
+          <p class="answer-hint">После выбора откроется следующее утверждение.</p>
+        </div>
+        <nav class="question-navigation" aria-label="Навигация по тесту">
+          <button id="back-button" class="button button-secondary" type="button"><span aria-hidden="true">←</span> Назад</button>
+          <span id="previous-answer-note" class="previous-answer-note" hidden>Ваш предыдущий ответ выделен</span>
+        </nav>
+      </section>
+
+      <section id="result-screen" class="screen result-screen" aria-labelledby="result-title" hidden>
+        <p class="eyebrow">36 из 36 · Тест завершён</p>
+        <h2 id="result-title" tabindex="-1">Исследование потенциала способностей</h2>
+        <div class="result-summary" aria-labelledby="leading-results-label">
+          <p id="leading-results-label" class="summary-label">Два ведущих результата</p>
+          <div id="leading-results"></div>
+          <p id="tie-note" class="tie-note" hidden></p>
+        </div>
+        <div class="scales-heading"><h3>Все 9 шкал</h3><span>Максимум — 20 баллов</span></div>
+        <ol id="scale-results" class="scale-results" aria-label="Результаты по девяти шкалам"></ol>
+        <p class="results-note">Результат отражает ваши ответы и служит для самоисследования. Он не является объективным измерением способностей или психологической диагностикой</p>
+        <p class="results-note">Высокий балл не доказывает развитость навыка, а низкий не означает отсутствия потенциала. Обратные стороны в описаниях не являются установленными характеристиками или диагнозами участника.</p>
+        <div id="scale-descriptions" class="scale-descriptions" aria-label="Описания девяти направлений потенциала"></div>
+        <div class="result-actions">
+          <button id="restart-button" class="button button-primary" type="button">Пройти заново <span aria-hidden="true">↻</span></button>
+          <button id="edit-button" class="button button-secondary" type="button">Изменить ответы</button>
+        </div>
+      </section>
+
+      <noscript><p class="noscript-message">Для прохождения теста включите JavaScript в настройках браузера.</p></noscript>
+    </main>
+
+    <footer class="site-footer"><span>Небольшой шаг к пониманию себя</span><span>Ответы не сохраняются и не отправляются</span></footer>
+  </div>
+</body>
+</html>
